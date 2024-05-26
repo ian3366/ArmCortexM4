@@ -1,0 +1,4 @@
+../Src/main.c:31:6:Interrupt_Prioriy_Config	1
+../Src/main.c:44:5:main	1
+../Src/main.c:62:6:I2C1_EV_IRQHandler	1
+../Src/main.c:66:6:TIM2_IRQHandler	1

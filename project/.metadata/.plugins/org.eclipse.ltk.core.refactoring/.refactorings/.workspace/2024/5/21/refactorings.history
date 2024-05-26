@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;Operation_mode/Src/syscalls.c&apos;" deleteContents="false" description="Delete resource &apos;Operation_mode/Src/syscalls.c&apos;" element1="/Operation_mode/Src/syscalls.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1716568694018"/>&#x0A;<refactoring comment="Rename resource &apos;stacj&apos; to &apos;stack&apos;" description="Rename resource &apos;stacj&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/stacj" name="stack" stamp="1716658602788" updateReferences="true"/>
+</session>

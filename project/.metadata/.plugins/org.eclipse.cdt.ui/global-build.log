@@ -1,0 +1,611 @@
+22:47:21 **** Incremental Build of configuration Debug for project 001HelloWorld ****
+make -j20 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446zetx.d" -MT"Startup/startup_stm32f446zetx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f446zetx.o" "../Startup/startup_stm32f446zetx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "001HelloWorld.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\001HelloWorld\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001HelloWorld.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001HelloWorld.elf
+ 
+arm-none-eabi-size  001HelloWorld.elf 
+arm-none-eabi-objdump -h -S 001HelloWorld.elf  > "001HelloWorld.list"
+   text	   data	    bss	    dec	    hex	filename
+    712	      0	   1568	   2280	    8e8	001HelloWorld.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001HelloWorld.list
+ 
+23:15:37 **** Incremental Build of configuration Debug for project 001HelloWorld ****
+make -j20 all 
+arm-none-eabi-size  001HelloWorld.elf 
+   text	   data	    bss	    dec	    hex	filename
+    712	      0	   1568	   2280	    8e8	001HelloWorld.elf
+Finished building: default.size.stdout
+ 
+23:59:14 **** Build of configuration Debug for project 001HelloWorld ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -o "001HelloWorld.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\001HelloWorld\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001HelloWorld.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001HelloWorld.elf
+ 
+arm-none-eabi-size  001HelloWorld.elf 
+arm-none-eabi-objdump -h -S 001HelloWorld.elf  > "001HelloWorld.list"
+   text	   data	    bss	    dec	    hex	filename
+    712	      0	   1568	   2280	    8e8	001HelloWorld.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001HelloWorld.list
+ 
+00:01:02 **** Incremental Build of configuration Debug for project 001HelloWorld ****
+make -j20 all 
+arm-none-eabi-size  001HelloWorld.elf 
+   text	   data	    bss	    dec	    hex	filename
+    712	      0	   1568	   2280	    8e8	001HelloWorld.elf
+Finished building: default.size.stdout
+ 
+00:02:03 **** Incremental Build of configuration Debug for project 001HelloWorld ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "001HelloWorld.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\001HelloWorld\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001HelloWorld.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001HelloWorld.elf
+ 
+arm-none-eabi-size  001HelloWorld.elf 
+arm-none-eabi-objdump -h -S 001HelloWorld.elf  > "001HelloWorld.list"
+   text	   data	    bss	    dec	    hex	filename
+   3444	     92	   1900	   5436	   153c	001HelloWorld.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001HelloWorld.list
+ 
+00:37:46 **** Build of configuration Debug for project Operation_mode ****
+make -j20 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446zetx.d" -MT"Startup/startup_stm32f446zetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446zetx.o" "../Startup/startup_stm32f446zetx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "Operation_mode.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\Operation_mode\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Operation_mode.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Operation_mode.elf
+ 
+arm-none-eabi-size  Operation_mode.elf 
+arm-none-eabi-objdump -h -S Operation_mode.elf  > "Operation_mode.list"
+   text	   data	    bss	    dec	    hex	filename
+   3560	     92	   1900	   5552	   15b0	Operation_mode.elf
+Finished building: default.size.stdout
+ 
+Finished building: Operation_mode.list
+ 
+00:37:57 **** Incremental Build of configuration Debug for project Operation_mode ****
+make -j20 all 
+arm-none-eabi-size  Operation_mode.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3560	     92	   1900	   5552	   15b0	Operation_mode.elf
+Finished building: default.size.stdout
+ 
+00:38:21 **** Incremental Build of configuration Debug for project Operation_mode ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -o "Operation_mode.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\Operation_mode\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Operation_mode.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Operation_mode.elf
+ 
+arm-none-eabi-size  Operation_mode.elf 
+arm-none-eabi-objdump -h -S Operation_mode.elf  > "Operation_mode.list"
+   text	   data	    bss	    dec	    hex	filename
+   3640	     92	   1900	   5632	   1600	Operation_mode.elf
+Finished building: default.size.stdout
+ 
+Finished building: Operation_mode.list
+ 
+00:40:16 **** Incremental Build of configuration Debug for project Operation_mode ****
+make -j20 all 
+arm-none-eabi-size  Operation_mode.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3640	     92	   1900	   5632	   1600	Operation_mode.elf
+Finished building: default.size.stdout
+ 
+00:42:01 **** Incremental Build of configuration Debug for project Operation_mode ****
+make -j20 all 
+arm-none-eabi-size  Operation_mode.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3640	     92	   1900	   5632	   1600	Operation_mode.elf
+Finished building: default.size.stdout
+ 
+00:43:53 **** Incremental Build of configuration Debug for project Operation_mode ****
+make -j20 all 
+arm-none-eabi-size  Operation_mode.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3640	     92	   1900	   5632	   1600	Operation_mode.elf
+Finished building: default.size.stdout
+ 
+00:44:50 **** Incremental Build of configuration Debug for project Operation_mode ****
+make -j20 all 
+arm-none-eabi-size  Operation_mode.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3640	     92	   1900	   5632	   1600	Operation_mode.elf
+Finished building: default.size.stdout
+ 
+00:49:07 **** Incremental Build of configuration Debug for project Operation_mode ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Operation_mode.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\Operation_mode\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Operation_mode.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Operation_mode.elf
+ 
+arm-none-eabi-size  Operation_mode.elf 
+arm-none-eabi-objdump -h -S Operation_mode.elf  > "Operation_mode.list"
+   text	   data	    bss	    dec	    hex	filename
+   3640	     92	   1900	   5632	   1600	Operation_mode.elf
+Finished building: default.size.stdout
+ 
+Finished building: Operation_mode.list
+ 
+14:02:56 **** Build of configuration Debug for project stack ****
+make -j20 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446zetx.d" -MT"Startup/startup_stm32f446zetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446zetx.o" "../Startup/startup_stm32f446zetx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c:25:24: warning: return type defaults to 'int' [-Wimplicit-int]
+   25 | __attribute__((naked)) change_sp_to_psp(){
+      |                        ^~~~~~~~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:54:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   54 |         printf("res : %d \n",res);
+      |         ^~~~~~
+../Src/main.c:20:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   19 | #include <stdint.h>
+  +++ |+#include <stdio.h>
+   20 | 
+../Src/main.c:54:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   54 |         printf("res : %d \n",res);
+      |         ^~~~~~
+../Src/main.c:54:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Src/main.c: In function 'SVC_Handler':
+../Src/main.c:61:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   61 |         printf("In SVC exception Now sp -> msp \n"); //Handler mode-> sp will back to msp
+      |         ^~~~~~
+../Src/main.c:61:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+C:\Users\z0976\AppData\Local\Temp\ccUR7S13.s: Assembler messages:
+C:\Users\z0976\AppData\Local\Temp\ccUR7S13.s:86: Error: found '
+', expected: ')'
+C:\Users\z0976\AppData\Local\Temp\ccUR7S13.s:102: Error: bad arguments to instruction -- `mrs R0 CONTROL'
+C:\Users\z0976\AppData\Local\Temp\ccUR7S13.s:110: Error: bad arguments to instruction -- `msr CONTROL R0'
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+14:04:22 **** Incremental Build of configuration Debug for project stack ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:26:24: warning: return type defaults to 'int' [-Wimplicit-int]
+   26 | __attribute__((naked)) change_sp_to_psp(){
+      |                        ^~~~~~~~~~~~~~~~
+C:\Users\z0976\AppData\Local\Temp\ccORnIbk.s: Assembler messages:
+C:\Users\z0976\AppData\Local\Temp\ccORnIbk.s:86: Error: found '
+', expected: ')'
+C:\Users\z0976\AppData\Local\Temp\ccORnIbk.s:102: Error: bad arguments to instruction -- `mrs R0 CONTROL'
+C:\Users\z0976\AppData\Local\Temp\ccORnIbk.s:110: Error: bad arguments to instruction -- `msr CONTROL R0'
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+14:04:46 **** Incremental Build of configuration Debug for project stack ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:26:24: warning: return type defaults to 'int' [-Wimplicit-int]
+   26 | __attribute__((naked)) change_sp_to_psp(){
+      |                        ^~~~~~~~~~~~~~~~
+C:\Users\z0976\AppData\Local\Temp\ccexA6zu.s: Assembler messages:
+C:\Users\z0976\AppData\Local\Temp\ccexA6zu.s:86: Error: found '
+', expected: ')'
+C:\Users\z0976\AppData\Local\Temp\ccexA6zu.s:102: Error: bad arguments to instruction -- `mrs R0 CONTROL'
+C:\Users\z0976\AppData\Local\Temp\ccexA6zu.s:110: Error: bad arguments to instruction -- `msr CONTROL R0'
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+14:05:16 **** Incremental Build of configuration Debug for project stack ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+C:\Users\z0976\AppData\Local\Temp\cc0wVElV.s: Assembler messages:
+C:\Users\z0976\AppData\Local\Temp\cc0wVElV.s:86: Error: found '
+', expected: ')'
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+14:06:12 **** Incremental Build of configuration Debug for project stack ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+C:\Users\z0976\AppData\Local\Temp\ccyE0dcy.s: Assembler messages:
+C:\Users\z0976\AppData\Local\Temp\ccyE0dcy.s:86: Error: found '
+', expected: ')'
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+14:08:23 **** Incremental Build of configuration Debug for project stack ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stack.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\stacj\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stack.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stack.elf
+ 
+arm-none-eabi-size  stack.elf 
+arm-none-eabi-objdump -h -S stack.elf  > "stack.list"
+   text	   data	    bss	    dec	    hex	filename
+   5320	     92	   1900	   7312	   1c90	stack.elf
+Finished building: default.size.stdout
+ 
+Finished building: stack.list
+ 
+14:08:33 **** Incremental Build of configuration Debug for project stack ****
+make -j20 all 
+arm-none-eabi-size  stack.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5320	     92	   1900	   7312	   1c90	stack.elf
+Finished building: default.size.stdout
+ 
+15:44:17 **** Build of configuration Debug for project Uart3interrupt ****
+make -j20 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446zetx.d" -MT"Startup/startup_stm32f446zetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446zetx.o" "../Startup/startup_stm32f446zetx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c: In function 'main':
+../Src/main.c:30:10: error: 'pNVIC_ISPR' undeclared (first use in this function); did you mean 'pNVIC_ISPR2'?
+   30 |         *pNVIC_ISPR |= (1<< (USART3_IRQ%32));
+      |          ^~~~~~~~~~
+      |          pNVIC_ISPR2
+../Src/main.c:30:10: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:29:19: warning: unused variable 'pNVIC_ISPR2' [-Wunused-variable]
+   29 |         uint32_t *pNVIC_ISPR2 = (uint32_t*)(NVIC_BASE_ADDRESS + 0x200 + 0x4);
+      |                   ^~~~~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+15:44:29 **** Incremental Build of configuration Debug for project Uart3interrupt ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:30:10: error: 'pNVIC_ISPR' undeclared (first use in this function); did you mean 'pNVIC_ISPR2'?
+   30 |         *pNVIC_ISPR |= (1<< (USART3_IRQ%32));
+      |          ^~~~~~~~~~
+      |          pNVIC_ISPR2
+../Src/main.c:30:10: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:29:19: warning: unused variable 'pNVIC_ISPR2' [-Wunused-variable]
+   29 |         uint32_t *pNVIC_ISPR2 = (uint32_t*)(NVIC_BASE_ADDRESS + 0x200 + 0x4);
+      |                   ^~~~~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+15:45:47 **** Incremental Build of configuration Debug for project Uart3interrupt ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Uart3interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\Uart3interrupt\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Uart3interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Uart3interrupt.elf
+ 
+arm-none-eabi-size  Uart3interrupt.elf 
+arm-none-eabi-objdump -h -S Uart3interrupt.elf  > "Uart3interrupt.list"
+   text	   data	    bss	    dec	    hex	filename
+   3528	     92	   1900	   5520	   1590	Uart3interrupt.elf
+Finished building: default.size.stdout
+ 
+Finished building: Uart3interrupt.list
+ 
+15:45:56 **** Incremental Build of configuration Debug for project Uart3interrupt ****
+make -j20 all 
+arm-none-eabi-size  Uart3interrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3528	     92	   1900	   5520	   1590	Uart3interrupt.elf
+Finished building: default.size.stdout
+ 
+16:30:19 **** Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446zetx.d" -MT"Startup/startup_stm32f446zetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446zetx.o" "../Startup/startup_stm32f446zetx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c: In function 'Interrupt_Prioriy_Config':
+../Src/main.c:29:31: error: 'uint32' undeclared (first use in this function); did you mean 'uint32_t'?
+   29 |         uint32_t *NVIC_IPR = (uint32*)(NVIC_BASE_ADDRESS + 0x400 + irq_number/4);
+      |                               ^~~~~~
+      |                               uint32_t
+../Src/main.c:29:31: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:29:38: error: expected expression before ')' token
+   29 |         uint32_t *NVIC_IPR = (uint32*)(NVIC_BASE_ADDRESS + 0x400 + irq_number/4);
+      |                                      ^
+../Src/main.c: In function 'main':
+../Src/main.c:45:32: error: 'uin32_t' undeclared (first use in this function); did you mean 'uint32_t'?
+   45 |         uint32_t* NVIC_ISPR = (uin32_t*)(NVIC_BASE_ADDRESS + 0x200 + I2C1_EV_IRQ/32);
+      |                                ^~~~~~~
+      |                                uint32_t
+../Src/main.c:45:40: error: expected expression before ')' token
+   45 |         uint32_t* NVIC_ISPR = (uin32_t*)(NVIC_BASE_ADDRESS + 0x200 + I2C1_EV_IRQ/32);
+      |                                        ^
+../Src/main.c:48:40: error: expected expression before ')' token
+   48 |         uint32_t* NVIC_ISER = (uin32_t*)(NVIC_BASE_ADDRESS + 0x100 + I2C1_EV_IRQ/32);//due to I2C1&Time2 in smae IRQ Group
+      |                                        ^
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+16:31:10 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'Interrupt_Prioriy_Config':
+../Src/main.c:29:31: error: 'uint32' undeclared (first use in this function); did you mean 'uint32_t'?
+   29 |         uint32_t *NVIC_IPR = (uint32*)(NVIC_BASE_ADDRESS + 0x400 + (irq_number/4));
+      |                               ^~~~~~
+      |                               uint32_t
+../Src/main.c:29:31: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:29:38: error: expected expression before ')' token
+   29 |         uint32_t *NVIC_IPR = (uint32*)(NVIC_BASE_ADDRESS + 0x400 + (irq_number/4));
+      |                                      ^
+../Src/main.c: In function 'main':
+../Src/main.c:45:32: error: 'uin32_t' undeclared (first use in this function); did you mean 'uint32_t'?
+   45 |         uint32_t* NVIC_ISPR = (uin32_t*)(NVIC_BASE_ADDRESS + 0x200 + (I2C1_EV_IRQ/32));
+      |                                ^~~~~~~
+      |                                uint32_t
+../Src/main.c:45:40: error: expected expression before ')' token
+   45 |         uint32_t* NVIC_ISPR = (uin32_t*)(NVIC_BASE_ADDRESS + 0x200 + (I2C1_EV_IRQ/32));
+      |                                        ^
+../Src/main.c:48:40: error: expected expression before ')' token
+   48 |         uint32_t* NVIC_ISER = (uin32_t*)(NVIC_BASE_ADDRESS + 0x100 + (I2C1_EV_IRQ/32));//due to I2C1&Time2 in smae IRQ Group
+      |                                        ^
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+16:31:24 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'Interrupt_Prioriy_Config':
+../Src/main.c:29:31: error: 'uint32' undeclared (first use in this function); did you mean 'uint32_t'?
+   29 |         uint32_t *NVIC_IPR = (uint32*)(NVIC_BASE_ADDRESS + 0x400 + (irq_number/4));
+      |                               ^~~~~~
+      |                               uint32_t
+../Src/main.c:29:31: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:29:38: error: expected expression before ')' token
+   29 |         uint32_t *NVIC_IPR = (uint32*)(NVIC_BASE_ADDRESS + 0x400 + (irq_number/4));
+      |                                      ^
+../Src/main.c: In function 'main':
+../Src/main.c:45:32: error: 'uin32_t' undeclared (first use in this function); did you mean 'uint32_t'?
+   45 |         uint32_t* NVIC_ISPR = (uin32_t*)(NVIC_BASE_ADDRESS + 0x200 + (I2C1_EV_IRQ/32));
+      |                                ^~~~~~~
+      |                                uint32_t
+../Src/main.c:45:40: error: expected expression before ')' token
+   45 |         uint32_t* NVIC_ISPR = (uin32_t*)(NVIC_BASE_ADDRESS + 0x200 + (I2C1_EV_IRQ/32));
+      |                                        ^
+../Src/main.c:48:40: error: expected expression before ')' token
+   48 |         uint32_t* NVIC_ISER = (uin32_t*)(NVIC_BASE_ADDRESS + 0x100 + (I2C1_EV_IRQ/32));//due to I2C1&Time2 in smae IRQ Group
+      |                                        ^
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+16:31:30 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'Interrupt_Prioriy_Config':
+../Src/main.c:29:31: error: 'uint32' undeclared (first use in this function); did you mean 'uint32_t'?
+   29 |         uint32_t *NVIC_IPR = (uint32*)(NVIC_BASE_ADDRESS + 0x400 + (irq_number/4));
+      |                               ^~~~~~
+      |                               uint32_t
+../Src/main.c:29:31: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:29:38: error: expected expression before ')' token
+   29 |         uint32_t *NVIC_IPR = (uint32*)(NVIC_BASE_ADDRESS + 0x400 + (irq_number/4));
+      |                                      ^
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+16:31:47 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'Interrupt_Prioriy_Config':
+../Src/main.c:29:31: error: 'uint32' undeclared (first use in this function); did you mean 'uint32_t'?
+   29 |         uint32_t *NVIC_IPR = (uint32*)(NVIC_BASE_ADDRESS + 0x400 + (irq_number/4));
+      |                               ^~~~~~
+      |                               uint32_t
+../Src/main.c:29:31: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:29:38: error: expected expression before ')' token
+   29 |         uint32_t *NVIC_IPR = (uint32*)(NVIC_BASE_ADDRESS + 0x400 + (irq_number/4));
+      |                                      ^
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+16:31:50 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "IRQpriority.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\IRQpriority\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IRQpriority.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: IRQpriority.elf
+ 
+arm-none-eabi-size  IRQpriority.elf 
+arm-none-eabi-objdump -h -S IRQpriority.elf  > "IRQpriority.list"
+   text	   data	    bss	    dec	    hex	filename
+   3608	     92	   1900	   5600	   15e0	IRQpriority.elf
+Finished building: default.size.stdout
+ 
+Finished building: IRQpriority.list
+ 
+16:32:20 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -o "IRQpriority.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\IRQpriority\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IRQpriority.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: IRQpriority.elf
+ 
+arm-none-eabi-size  IRQpriority.elf 
+arm-none-eabi-objdump -h -S IRQpriority.elf  > "IRQpriority.list"
+   text	   data	    bss	    dec	    hex	filename
+   3688	     92	   1900	   5680	   1630	IRQpriority.elf
+Finished building: default.size.stdout
+ 
+Finished building: IRQpriority.list
+ 
+16:35:58 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "IRQpriority.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\IRQpriority\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IRQpriority.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: IRQpriority.elf
+ 
+arm-none-eabi-size  IRQpriority.elf 
+arm-none-eabi-objdump -h -S IRQpriority.elf  > "IRQpriority.list"
+   text	   data	    bss	    dec	    hex	filename
+   3688	     92	   1900	   5680	   1630	IRQpriority.elf
+Finished building: default.size.stdout
+ 
+Finished building: IRQpriority.list
+ 
+16:37:44 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-size  IRQpriority.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3688	     92	   1900	   5680	   1630	IRQpriority.elf
+Finished building: default.size.stdout
+ 
+16:42:19 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "IRQpriority.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\IRQpriority\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IRQpriority.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: IRQpriority.elf
+ 
+arm-none-eabi-size  IRQpriority.elf 
+arm-none-eabi-objdump -h -S IRQpriority.elf  > "IRQpriority.list"
+   text	   data	    bss	    dec	    hex	filename
+   5408	     92	   1900	   7400	   1ce8	IRQpriority.elf
+Finished building: default.size.stdout
+ 
+Finished building: IRQpriority.list
+ 
+16:48:29 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "IRQpriority.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\IRQpriority\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IRQpriority.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: IRQpriority.elf
+ 
+arm-none-eabi-size  IRQpriority.elf 
+arm-none-eabi-objdump -h -S IRQpriority.elf  > "IRQpriority.list"
+   text	   data	    bss	    dec	    hex	filename
+   5428	    100	   1900	   7428	   1d04	IRQpriority.elf
+Finished building: default.size.stdout
+ 
+Finished building: IRQpriority.list
+ 
+16:52:47 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'Interrupt_Prioriy_Config':
+../Src/main.c:35:26: error: 'NVIC_IPR' undeclared (first use in this function); did you mean 'pNVIC_IPR'?
+   35 |         uint32_t *ipr =  NVIC_IPR+iprx;
+      |                          ^~~~~~~~
+      |                          pNVIC_IPR
+../Src/main.c:35:26: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:35:19: warning: unused variable 'ipr' [-Wunused-variable]
+   35 |         uint32_t *ipr =  NVIC_IPR+iprx;
+      |                   ^~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+16:52:57 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'Interrupt_Prioriy_Config':
+../Src/main.c:35:19: warning: unused variable 'ipr' [-Wunused-variable]
+   35 |         uint32_t *ipr =  pNVIC_IPR+iprx;
+      |                   ^~~
+arm-none-eabi-gcc -o "IRQpriority.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\IRQpriority\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IRQpriority.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: IRQpriority.elf
+ 
+arm-none-eabi-size  IRQpriority.elf 
+arm-none-eabi-objdump -h -S IRQpriority.elf  > "IRQpriority.list"
+   text	   data	    bss	    dec	    hex	filename
+   5444	    104	   1904	   7452	   1d1c	IRQpriority.elf
+Finished building: default.size.stdout
+ 
+Finished building: IRQpriority.list
+ 
+16:53:21 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "IRQpriority.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\IRQpriority\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IRQpriority.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: IRQpriority.elf
+ 
+arm-none-eabi-size  IRQpriority.elf 
+arm-none-eabi-objdump -h -S IRQpriority.elf  > "IRQpriority.list"
+   text	   data	    bss	    dec	    hex	filename
+   5432	    104	   1904	   7440	   1d10	IRQpriority.elf
+Finished building: default.size.stdout
+ 
+Finished building: IRQpriority.list
+ 
+16:54:41 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "IRQpriority.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\IRQpriority\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IRQpriority.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: IRQpriority.elf
+ 
+arm-none-eabi-size  IRQpriority.elf 
+arm-none-eabi-objdump -h -S IRQpriority.elf  > "IRQpriority.list"
+   text	   data	    bss	    dec	    hex	filename
+   3708	    100	   1900	   5708	   164c	IRQpriority.elf
+Finished building: default.size.stdout
+ 
+Finished building: IRQpriority.list
+ 
+16:56:56 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "IRQpriority.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\IRQpriority\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IRQpriority.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: IRQpriority.elf
+ 
+arm-none-eabi-size  IRQpriority.elf 
+arm-none-eabi-objdump -h -S IRQpriority.elf  > "IRQpriority.list"
+   text	   data	    bss	    dec	    hex	filename
+   3708	    100	   1900	   5708	   164c	IRQpriority.elf
+Finished building: default.size.stdout
+ 
+Finished building: IRQpriority.list
+ 
+16:58:24 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "IRQpriority.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\IRQpriority\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IRQpriority.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: IRQpriority.elf
+ 
+arm-none-eabi-size  IRQpriority.elf 
+arm-none-eabi-objdump -h -S IRQpriority.elf  > "IRQpriority.list"
+   text	   data	    bss	    dec	    hex	filename
+   3708	    100	   1900	   5708	   164c	IRQpriority.elf
+Finished building: default.size.stdout
+ 
+Finished building: IRQpriority.list
+ 
+16:58:39 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-size  IRQpriority.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3708	    100	   1900	   5708	   164c	IRQpriority.elf
+Finished building: default.size.stdout
+ 
+20:48:53 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "IRQpriority.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\IRQpriority\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IRQpriority.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: IRQpriority.elf
+ 
+arm-none-eabi-size  IRQpriority.elf 
+arm-none-eabi-objdump -h -S IRQpriority.elf  > "IRQpriority.list"
+   text	   data	    bss	    dec	    hex	filename
+   3696	    100	   1900	   5696	   1640	IRQpriority.elf
+Finished building: default.size.stdout
+ 
+Finished building: IRQpriority.list
+ 
+20:50:38 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "IRQpriority.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\IRQpriority\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IRQpriority.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: IRQpriority.elf
+ 
+arm-none-eabi-size  IRQpriority.elf 
+arm-none-eabi-objdump -h -S IRQpriority.elf  > "IRQpriority.list"
+   text	   data	    bss	    dec	    hex	filename
+   3704	    100	   1900	   5704	   1648	IRQpriority.elf
+Finished building: default.size.stdout
+ 
+Finished building: IRQpriority.list
+ 
+20:51:42 **** Incremental Build of configuration Debug for project IRQpriority ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "IRQpriority.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\IRQpriority\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IRQpriority.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: IRQpriority.elf
+ 
+arm-none-eabi-size  IRQpriority.elf 
+arm-none-eabi-objdump -h -S IRQpriority.elf  > "IRQpriority.list"
+   text	   data	    bss	    dec	    hex	filename
+   3704	    100	   1900	   5704	   1648	IRQpriority.elf
+Finished building: default.size.stdout
+ 
+Finished building: IRQpriority.list
+ 
