@@ -1,0 +1,12 @@
+2024-05-28 23:33:56,743 [INFO] MainUpdater:2873 - connection check result : 10
+2024-05-28 23:33:56,891 [INFO] McuFinderGlobals:76 - Set McuFinderConnectedMode to true
+2024-05-28 23:33:56,892 [INFO] MultiScanPanel:200 - Auto-refresh data requested => check proxy status ongoing
+2024-05-28 23:33:56,892 [INFO] FinderPluginLoader:95 - Searching for filters in installed packs
+2024-05-28 23:33:57,258 [INFO] LoadUrlFilesThread:185 - End of LoadServerUrlFiles without Thread
+2024-05-28 23:33:57,258 [INFO] DetailPanel:341 - Set advertising image to C:/Users/z0976/STM32Cube/Repository/\en.prom-stm32h7rs-mcu-finder.jpg
+2024-05-28 23:34:01,895 [INFO] McuResultTable:1403 - Mark MCU STM32C011D6Y3TR as favorite
+2024-05-28 23:34:01,901 [INFO] ApiDb:581 - Connected to CubeFinder SQLite database (C:\Users\z0976\.stmcufinder\plugins\mcufinder\mcu\cube-finder-db.db)
+2024-05-28 23:34:06,948 [INFO] McuResultTable:1403 - Unmark MCU STM32C011D6Y3TR as favorite
+2024-05-28 23:34:58,779 [INFO] McuFinderGlobals:76 - Set McuFinderConnectedMode to true
+2024-05-28 23:34:58,781 [INFO] ApiDb:448 - Save user favorites file C:\Users\z0976/.stm32cubeide/favorites.mcus.txt: 1 item(s)
+2024-05-28 23:34:58,781 [INFO] ApiDb:452 - User favorites MCUs=[STM32F446ZET6]

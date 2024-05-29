@@ -2,3 +2,6 @@
 1716709431524	Delete resource 'Uart3interrupt/Src/syscalls.c'
 1716709986109	Delete resource 'IRQpriority'
 1716712326779	Delete resource 'IRQpriority/Src/syscalls.c'
+1716821668426	Delete resource 'fault_gen/Src/syscalls.c'
+1716910508564	Delete resource 'SVC_Instruction/Src/syscalls.c'
+1716998644805	Delete resource 'SVC_Operation/Src/syscalls.c'

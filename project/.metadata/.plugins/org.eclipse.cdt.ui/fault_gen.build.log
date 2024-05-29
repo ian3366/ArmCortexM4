@@ -1,0 +1,21 @@
+23:26:17 **** Incremental Build of configuration Debug for project fault_gen ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:33:50: warning: division by zero [-Wdiv-by-zero]
+   33 |         printf("usage fault cause 1/0 = %d \n", 1/0);//usage fault
+      |                                                  ^
+arm-none-eabi-gcc -o "fault_gen.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\fault_gen\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fault_gen.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fault_gen.elf
+ 
+arm-none-eabi-size  fault_gen.elf 
+arm-none-eabi-objdump -h -S fault_gen.elf  > "fault_gen.list"
+   text	   data	    bss	    dec	    hex	filename
+   5436	     92	   1900	   7428	   1d04	fault_gen.elf
+Finished building: default.size.stdout
+ 
+Finished building: fault_gen.list
+ 
+
+23:26:18 Build Finished. 0 errors, 1 warnings. (took 384ms)
+

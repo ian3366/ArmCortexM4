@@ -609,3 +609,565 @@ Finished building: default.size.stdout
  
 Finished building: IRQpriority.list
  
+23:20:28 **** Build of configuration Debug for project fault_gen ****
+make -j20 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446zetx.d" -MT"Startup/startup_stm32f446zetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446zetx.o" "../Startup/startup_stm32f446zetx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c: In function 'main':
+../Src/main.c:32:41: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   32 |         printf("Find Xn 0x40000000 : %08x \n" , *pFindXN);
+      |                                      ~~~^       ~~~~~~~~
+      |                                         |       |
+      |                                         |       uint32_t {aka long unsigned int}
+      |                                         unsigned int
+      |                                      %08lx
+../Src/main.c:33:50: warning: division by zero [-Wdiv-by-zero]
+   33 |         printf("usage fault cause 1/0 = %d \n", 1/0);//usage fault
+      |                                                  ^
+arm-none-eabi-gcc -o "fault_gen.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\fault_gen\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fault_gen.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fault_gen.elf
+ 
+arm-none-eabi-size  fault_gen.elf 
+arm-none-eabi-objdump -h -S fault_gen.elf  > "fault_gen.list"
+   text	   data	    bss	    dec	    hex	filename
+   5392	     92	   1900	   7384	   1cd8	fault_gen.elf
+Finished building: default.size.stdout
+ 
+Finished building: fault_gen.list
+ 
+23:20:37 **** Incremental Build of configuration Debug for project fault_gen ****
+make -j20 all 
+arm-none-eabi-size  fault_gen.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5392	     92	   1900	   7384	   1cd8	fault_gen.elf
+Finished building: default.size.stdout
+ 
+23:22:12 **** Incremental Build of configuration Debug for project fault_gen ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:32:41: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   32 |         printf("Find Xn 0x40000000 : %08x \n" , *pFindXN);
+      |                                      ~~~^       ~~~~~~~~
+      |                                         |       |
+      |                                         |       uint32_t {aka long unsigned int}
+      |                                         unsigned int
+      |                                      %08lx
+../Src/main.c:33:50: warning: division by zero [-Wdiv-by-zero]
+   33 |         printf("usage fault cause 1/0 = %d \n", 1/0);//usage fault
+      |                                                  ^
+arm-none-eabi-gcc -o "fault_gen.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\fault_gen\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fault_gen.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fault_gen.elf
+ 
+arm-none-eabi-size  fault_gen.elf 
+arm-none-eabi-objdump -h -S fault_gen.elf  > "fault_gen.list"
+   text	   data	    bss	    dec	    hex	filename
+   5396	     92	   1900	   7388	   1cdc	fault_gen.elf
+Finished building: default.size.stdout
+ 
+Finished building: fault_gen.list
+ 
+23:23:02 **** Incremental Build of configuration Debug for project fault_gen ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:32:41: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   32 |         printf("Find Xn 0x40000000 : %08X \n" , *pFindXN);
+      |                                      ~~~^       ~~~~~~~~
+      |                                         |       |
+      |                                         |       uint32_t {aka long unsigned int}
+      |                                         unsigned int
+      |                                      %08lX
+../Src/main.c:33:50: warning: division by zero [-Wdiv-by-zero]
+   33 |         printf("usage fault cause 1/0 = %d \n", 1/0);//usage fault
+      |                                                  ^
+arm-none-eabi-gcc -o "fault_gen.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\fault_gen\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fault_gen.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fault_gen.elf
+ 
+arm-none-eabi-size  fault_gen.elf 
+arm-none-eabi-objdump -h -S fault_gen.elf  > "fault_gen.list"
+   text	   data	    bss	    dec	    hex	filename
+   5396	     92	   1900	   7388	   1cdc	fault_gen.elf
+Finished building: default.size.stdout
+ 
+Finished building: fault_gen.list
+ 
+23:25:39 **** Incremental Build of configuration Debug for project fault_gen ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:32:41: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   32 |         printf("Find Xn 0x40000000 : %08X \n" , *pFindXN);
+      |                                      ~~~^       ~~~~~~~~
+      |                                         |       |
+      |                                         |       uint32_t {aka long unsigned int}
+      |                                         unsigned int
+      |                                      %08lX
+../Src/main.c:33:50: warning: division by zero [-Wdiv-by-zero]
+   33 |         printf("usage fault cause 1/0 = %d \n", 1/0);//usage fault
+      |                                                  ^
+../Src/main.c: In function 'UsageFault_Handler':
+../Src/main.c:53:26: warning: format '%Lx' expects argument of type 'long long unsigned int', but argument 2 has type 'long unsigned int' [-Wformat=]
+   53 |         printf("UFSR = %Lx\n",(*pUFSR) &0xFFFF);
+      |                        ~~^    ~~~~~~~~~~~~~~~~
+      |                          |             |
+      |                          |             long unsigned int
+      |                          long long unsigned int
+      |                        %lx
+arm-none-eabi-gcc -o "fault_gen.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\fault_gen\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fault_gen.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fault_gen.elf
+ 
+arm-none-eabi-size  fault_gen.elf 
+arm-none-eabi-objdump -h -S fault_gen.elf  > "fault_gen.list"
+   text	   data	    bss	    dec	    hex	filename
+   5436	     92	   1900	   7428	   1d04	fault_gen.elf
+Finished building: default.size.stdout
+ 
+Finished building: fault_gen.list
+ 
+23:26:17 **** Incremental Build of configuration Debug for project fault_gen ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:33:50: warning: division by zero [-Wdiv-by-zero]
+   33 |         printf("usage fault cause 1/0 = %d \n", 1/0);//usage fault
+      |                                                  ^
+arm-none-eabi-gcc -o "fault_gen.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\fault_gen\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fault_gen.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fault_gen.elf
+ 
+arm-none-eabi-size  fault_gen.elf 
+arm-none-eabi-objdump -h -S fault_gen.elf  > "fault_gen.list"
+   text	   data	    bss	    dec	    hex	filename
+   5436	     92	   1900	   7428	   1d04	fault_gen.elf
+Finished building: default.size.stdout
+ 
+Finished building: fault_gen.list
+ 
+23:51:31 **** Build of configuration Debug for project SVC_Instruction ****
+make -j20 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446zetx.d" -MT"Startup/startup_stm32f446zetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446zetx.o" "../Startup/startup_stm32f446zetx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c: In function 'SVC_Handler_c':
+../Src/main.c:41:9: error: 'svc_number' undeclared (first use in this function); did you mean 'svcNumber'?
+   41 |         svc_number+=4;
+      |         ^~~~~~~~~~
+      |         svcNumber
+../Src/main.c:41:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+23:51:45 **** Incremental Build of configuration Debug for project SVC_Instruction ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC_Instruction.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\SVC_Instruction\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC_Instruction.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC_Instruction.elf
+ 
+arm-none-eabi-size  SVC_Instruction.elf 
+arm-none-eabi-objdump -h -S SVC_Instruction.elf  > "SVC_Instruction.list"
+   text	   data	    bss	    dec	    hex	filename
+   5120	     92	   1900	   7112	   1bc8	SVC_Instruction.elf
+Finished building: default.size.stdout
+ 
+Finished building: SVC_Instruction.list
+ 
+23:51:55 **** Incremental Build of configuration Debug for project SVC_Instruction ****
+make -j20 all 
+arm-none-eabi-size  SVC_Instruction.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5120	     92	   1900	   7112	   1bc8	SVC_Instruction.elf
+Finished building: default.size.stdout
+ 
+23:52:27 **** Incremental Build of configuration Debug for project SVC_Instruction ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC_Instruction.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\SVC_Instruction\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC_Instruction.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC_Instruction.elf
+ 
+arm-none-eabi-size  SVC_Instruction.elf 
+arm-none-eabi-objdump -h -S SVC_Instruction.elf  > "SVC_Instruction.list"
+   text	   data	    bss	    dec	    hex	filename
+   5308	     92	   1900	   7300	   1c84	SVC_Instruction.elf
+Finished building: default.size.stdout
+ 
+Finished building: SVC_Instruction.list
+ 
+23:52:53 **** Incremental Build of configuration Debug for project SVC_Instruction ****
+make -j20 all 
+arm-none-eabi-size  SVC_Instruction.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5308	     92	   1900	   7300	   1c84	SVC_Instruction.elf
+Finished building: default.size.stdout
+ 
+23:53:27 **** Incremental Build of configuration Debug for project SVC_Instruction ****
+make -j20 all 
+arm-none-eabi-size  SVC_Instruction.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5308	     92	   1900	   7300	   1c84	SVC_Instruction.elf
+Finished building: default.size.stdout
+ 
+00:02:00 **** Incremental Build of configuration Debug for project SVC_Instruction ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC_Instruction.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\SVC_Instruction\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC_Instruction.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC_Instruction.elf
+ 
+arm-none-eabi-size  SVC_Instruction.elf 
+arm-none-eabi-objdump -h -S SVC_Instruction.elf  > "SVC_Instruction.list"
+   text	   data	    bss	    dec	    hex	filename
+   5308	     92	   1900	   7300	   1c84	SVC_Instruction.elf
+Finished building: default.size.stdout
+ 
+Finished building: SVC_Instruction.list
+ 
+00:17:38 **** Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446zetx.d" -MT"Startup/startup_stm32f446zetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446zetx.o" "../Startup/startup_stm32f446zetx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c: In function 'svc_add':
+../Src/main.c:26:16: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   26 |         return res;
+      |                ^~~
+../Src/main.c:22:6: note: declared here
+   22 | void svc_add(uint32_t a , uint32_t b){ // parameter 1 in R0 , parameter 2 in R1
+      |      ^~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:31:43: error: invalid use of void expression
+   31 |         printf("svc add value : %ld \n" , svc_add(10 , 20));
+      |                                           ^~~~~~~~~~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+00:17:47 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:31:35: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'int' [-Wformat=]
+   31 |         printf("svc add value : %ld \n" , svc_add(10 , 20));
+      |                                 ~~^       ~~~~~~~~~~~~~~~~
+      |                                   |       |
+      |                                   |       int
+      |                                   long int
+      |                                 %d
+C:\Users\z0976\AppData\Local\Temp\cczpnCWO.s: Assembler messages:
+C:\Users\z0976\AppData\Local\Temp\cczpnCWO.s:46: Error: missing expression -- `svc ,#36'
+C:\Users\z0976\AppData\Local\Temp\cczpnCWO.s:50: Error: junk at end of line, first unrecognized character is `0'
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+00:18:16 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+C:\Users\z0976\AppData\Local\Temp\ccYpF21q.s: Assembler messages:
+C:\Users\z0976\AppData\Local\Temp\ccYpF21q.s:46: Error: missing expression -- `svc ,#36'
+C:\Users\z0976\AppData\Local\Temp\ccYpF21q.s:50: Error: junk at end of line, first unrecognized character is `0'
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+00:19:01 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+C:\Users\z0976\AppData\Local\Temp\ccraQSjp.s: Assembler messages:
+C:\Users\z0976\AppData\Local\Temp\ccraQSjp.s:46: Error: missing expression -- `svc ,#36'
+C:\Users\z0976\AppData\Local\Temp\ccraQSjp.s:50: Error: junk at end of line, first unrecognized character is `0'
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+00:19:18 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+C:\Users\z0976\AppData\Local\Temp\cc09FUKB.s: Assembler messages:
+C:\Users\z0976\AppData\Local\Temp\cc09FUKB.s:46: Error: missing expression -- `svc ,#36'
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+00:20:43 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:32:35: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'int' [-Wformat=]
+   32 |         printf("svc add value : %ld \n" , res);
+      |                                 ~~^       ~~~
+      |                                   |       |
+      |                                   |       int
+      |                                   long int
+      |                                 %d
+C:\Users\z0976\AppData\Local\Temp\ccdk78cU.s: Assembler messages:
+C:\Users\z0976\AppData\Local\Temp\ccdk78cU.s:46: Error: missing expression -- `svc ,#36'
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+00:21:01 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+C:\Users\z0976\AppData\Local\Temp\ccHkWS0h.s: Assembler messages:
+C:\Users\z0976\AppData\Local\Temp\ccHkWS0h.s:46: Error: missing expression -- `svc ,#36'
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+00:21:33 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC_Operation.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\SVC_Operation\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC_Operation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC_Operation.elf
+ 
+arm-none-eabi-size  SVC_Operation.elf 
+arm-none-eabi-objdump -h -S SVC_Operation.elf  > "SVC_Operation.list"
+   text	   data	    bss	    dec	    hex	filename
+   5028	     92	   1900	   7020	   1b6c	SVC_Operation.elf
+Finished building: default.size.stdout
+ 
+Finished building: SVC_Operation.list
+ 
+00:21:40 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-size  SVC_Operation.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5028	     92	   1900	   7020	   1b6c	SVC_Operation.elf
+Finished building: default.size.stdout
+ 
+00:22:34 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-size  SVC_Operation.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5028	     92	   1900	   7020	   1b6c	SVC_Operation.elf
+Finished building: default.size.stdout
+ 
+00:23:43 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC_Operation.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\SVC_Operation\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC_Operation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC_Operation.elf
+ 
+arm-none-eabi-size  SVC_Operation.elf 
+arm-none-eabi-objdump -h -S SVC_Operation.elf  > "SVC_Operation.list"
+   text	   data	    bss	    dec	    hex	filename
+   5252	     92	   1900	   7244	   1c4c	SVC_Operation.elf
+Finished building: default.size.stdout
+ 
+Finished building: SVC_Operation.list
+ 
+00:25:22 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC_Operation.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\SVC_Operation\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC_Operation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC_Operation.elf
+ 
+arm-none-eabi-size  SVC_Operation.elf 
+arm-none-eabi-objdump -h -S SVC_Operation.elf  > "SVC_Operation.list"
+   text	   data	    bss	    dec	    hex	filename
+   5044	     92	   1900	   7036	   1b7c	SVC_Operation.elf
+Finished building: default.size.stdout
+ 
+Finished building: SVC_Operation.list
+ 
+00:26:36 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC_Operation.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\SVC_Operation\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC_Operation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC_Operation.elf
+ 
+arm-none-eabi-size  SVC_Operation.elf 
+arm-none-eabi-objdump -h -S SVC_Operation.elf  > "SVC_Operation.list"
+   text	   data	    bss	    dec	    hex	filename
+   5044	     92	   1900	   7036	   1b7c	SVC_Operation.elf
+Finished building: default.size.stdout
+ 
+Finished building: SVC_Operation.list
+ 
+00:43:36 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler_c':
+../Src/main.c:47:9: error: 'arg0' undeclared (first use in this function)
+   47 |         arg0 =pBaseOfStack[0];
+      |         ^~~~
+../Src/main.c:47:9: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:48:9: error: 'arg1' undeclared (first use in this function)
+   48 |         arg1 =pBaseOfStack[1];
+      |         ^~~~
+../Src/main.c:51:33: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   51 |                         return a+b;
+      |                                ~^~
+../Src/main.c:42:6: note: declared here
+   42 | void SVC_Handler_c(uint32_t* pBaseOfStack){
+      |      ^~~~~~~~~~~~~
+../Src/main.c:55:16: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   55 |         return 0;
+      |                ^
+../Src/main.c:42:6: note: declared here
+   42 | void SVC_Handler_c(uint32_t* pBaseOfStack){
+      |      ^~~~~~~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+00:44:32 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler_c':
+../Src/main.c:51:32: error: 'a' undeclared (first use in this function)
+   51 |                         return a+b;
+      |                                ^
+../Src/main.c:51:32: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:51:34: error: 'b' undeclared (first use in this function)
+   51 |                         return a+b;
+      |                                  ^
+../Src/main.c:46:25: warning: variable 'arg1' set but not used [-Wunused-but-set-variable]
+   46 |         uint32_t arg0 , arg1;
+      |                         ^~~~
+../Src/main.c:46:18: warning: variable 'arg0' set but not used [-Wunused-but-set-variable]
+   46 |         uint32_t arg0 , arg1;
+      |                  ^~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+00:44:49 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler_c':
+../Src/main.c:51:37: error: 'arg2' undeclared (first use in this function); did you mean 'arg1'?
+   51 |                         return arg1+arg2;
+      |                                     ^~~~
+      |                                     arg1
+../Src/main.c:51:37: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:46:18: warning: variable 'arg0' set but not used [-Wunused-but-set-variable]
+   46 |         uint32_t arg0 , arg1;
+      |                  ^~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+00:45:03 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+C:\Users\z0976\AppData\Local\Temp\ccPJuH5j.s: Assembler messages:
+C:\Users\z0976\AppData\Local\Temp\ccPJuH5j.s:137: Error: missing expression -- `b ,SVC_Handler_c'
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+00:45:13 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC_Operation.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\SVC_Operation\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC_Operation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC_Operation.elf
+ 
+arm-none-eabi-size  SVC_Operation.elf 
+arm-none-eabi-objdump -h -S SVC_Operation.elf  > "SVC_Operation.list"
+   text	   data	    bss	    dec	    hex	filename
+   5360	     92	   1900	   7352	   1cb8	SVC_Operation.elf
+Finished building: default.size.stdout
+ 
+Finished building: SVC_Operation.list
+ 
+00:46:14 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC_Operation.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\SVC_Operation\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC_Operation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC_Operation.elf
+ 
+arm-none-eabi-size  SVC_Operation.elf 
+arm-none-eabi-objdump -h -S SVC_Operation.elf  > "SVC_Operation.list"
+   text	   data	    bss	    dec	    hex	filename
+   5360	     92	   1900	   7352	   1cb8	SVC_Operation.elf
+Finished building: default.size.stdout
+ 
+Finished building: SVC_Operation.list
+ 
+00:48:17 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler_c':
+../Src/main.c:46:30: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'res'
+   46 |         uint32_t arg0 , arg1 res;
+      |                              ^~~
+../Src/main.c:48:9: error: 'arg1' undeclared (first use in this function); did you mean 'arg0'?
+   48 |         arg1 =pBaseOfStack[1];
+      |         ^~~~
+      |         arg0
+../Src/main.c:48:9: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:51:25: error: 'res' undeclared (first use in this function)
+   51 |                         res = arg0+arg1;
+      |                         ^~~
+../Src/main.c:62:1: warning: control reaches end of non-void function [-Wreturn-type]
+   62 | }
+      | ^
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+00:48:24 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC_Operation.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\SVC_Operation\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC_Operation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC_Operation.elf
+ 
+arm-none-eabi-size  SVC_Operation.elf 
+arm-none-eabi-objdump -h -S SVC_Operation.elf  > "SVC_Operation.list"
+   text	   data	    bss	    dec	    hex	filename
+   5360	     92	   1900	   7352	   1cb8	SVC_Operation.elf
+Finished building: default.size.stdout
+ 
+Finished building: SVC_Operation.list
+ 
+00:49:11 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC_Operation.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\SVC_Operation\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC_Operation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC_Operation.elf
+ 
+arm-none-eabi-size  SVC_Operation.elf 
+arm-none-eabi-objdump -h -S SVC_Operation.elf  > "SVC_Operation.list"
+   text	   data	    bss	    dec	    hex	filename
+   5360	     92	   1900	   7352	   1cb8	SVC_Operation.elf
+Finished building: default.size.stdout
+ 
+Finished building: SVC_Operation.list
+ 
+00:50:59 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC_Operation.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\SVC_Operation\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC_Operation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC_Operation.elf
+ 
+arm-none-eabi-size  SVC_Operation.elf 
+arm-none-eabi-objdump -h -S SVC_Operation.elf  > "SVC_Operation.list"
+   text	   data	    bss	    dec	    hex	filename
+   5360	     92	   1900	   7352	   1cb8	SVC_Operation.elf
+Finished building: default.size.stdout
+ 
+Finished building: SVC_Operation.list
+ 
+00:51:47 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC_Operation.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\SVC_Operation\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC_Operation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC_Operation.elf
+ 
+arm-none-eabi-size  SVC_Operation.elf 
+arm-none-eabi-objdump -h -S SVC_Operation.elf  > "SVC_Operation.list"
+   text	   data	    bss	    dec	    hex	filename
+   5360	     92	   1900	   7352	   1cb8	SVC_Operation.elf
+Finished building: default.size.stdout
+ 
+Finished building: SVC_Operation.list
+ 
+00:52:41 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC_Operation.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\SVC_Operation\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC_Operation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC_Operation.elf
+ 
+arm-none-eabi-size  SVC_Operation.elf 
+arm-none-eabi-objdump -h -S SVC_Operation.elf  > "SVC_Operation.list"
+   text	   data	    bss	    dec	    hex	filename
+   5364	     92	   1900	   7356	   1cbc	SVC_Operation.elf
+Finished building: default.size.stdout
+ 
+Finished building: SVC_Operation.list
+ 
+00:57:46 **** Incremental Build of configuration Debug for project SVC_Operation ****
+make -j20 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446ZETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC_Operation.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\jun\Learn\ArmCortexMProcessor\project\SVC_Operation\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC_Operation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC_Operation.elf
+ 
+arm-none-eabi-size  SVC_Operation.elf 
+arm-none-eabi-objdump -h -S SVC_Operation.elf  > "SVC_Operation.list"
+   text	   data	    bss	    dec	    hex	filename
+   5364	     92	   1900	   7356	   1cbc	SVC_Operation.elf
+Finished building: default.size.stdout
+ 
+Finished building: SVC_Operation.list
+ 

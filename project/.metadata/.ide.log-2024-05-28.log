@@ -1,0 +1,9 @@
+2024-05-30 00:03:24,701 [INFO] MainUpdater:2873 - connection check result : 10
+2024-05-30 00:03:24,858 [INFO] McuFinderGlobals:76 - Set McuFinderConnectedMode to true
+2024-05-30 00:03:24,859 [INFO] MultiScanPanel:200 - Auto-refresh data requested => check proxy status ongoing
+2024-05-30 00:03:24,860 [INFO] FinderPluginLoader:95 - Searching for filters in installed packs
+2024-05-30 00:03:25,415 [INFO] LoadUrlFilesThread:185 - End of LoadServerUrlFiles without Thread
+2024-05-30 00:03:25,415 [INFO] DetailPanel:341 - Set advertising image to C:/Users/z0976/STM32Cube/Repository/\en.prom-stm32h7rs-mcu-finder.jpg
+2024-05-30 00:03:55,653 [INFO] McuFinderGlobals:76 - Set McuFinderConnectedMode to true
+2024-05-30 00:03:55,654 [INFO] ApiDb:448 - Save user favorites file C:\Users\z0976/.stm32cubeide/favorites.mcus.txt: 1 item(s)
+2024-05-30 00:03:55,654 [INFO] ApiDb:452 - User favorites MCUs=[STM32F446ZET6]
